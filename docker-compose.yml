@@ -1,0 +1,31 @@
+version: '3.3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      target: deploy
+    ports:
+      - "8080:80"
+    profiles: ["frontend", "all"]
+    environment:
+      VITE_API_URL: http://backend:8000
+  backend:
+    build: ./strmap
+    ports:
+      - "8000:8000"
+    profiles: ["backend", "all"]
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASS: postgres
+  db:
+    image: postgis/postgis:16-3.4
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+volumes:
+  db-data:

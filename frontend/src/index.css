@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* navbar in autimo styling */ 
+  .navbar-autimo-primary {
+    @apply bg-white h-16 p-3 text-autimo-primary
+  }
+
+  /* bcgov style navbar */
+  .navbar-bcgov {
+    @apply bg-bcblue h-16 p-3 border-b-2 border-solid border-bcgold text-white
+  }
+
+  /* responsive map that is 80% of leftover viewport height (after header) on mobile devices,
+     and full height on large screens (leaving room for a data table on the side). */ 
+  .responsive-map {
+    @apply h-[calc(50vh-4rem)] md:h-[calc(100vh-4rem)]
+  }
+
+  .responsive-panel {
+    @apply md:h-[calc(100vh-4rem)]
+  }
+}

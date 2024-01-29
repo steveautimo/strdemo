@@ -10,7 +10,7 @@ services:
     environment:
       VITE_API_URL: http://backend:8000
   backend:
-    build: ./strmap
+    build: ./backend
     ports:
       - "8000:8000"
     profiles: ["backend", "all"]

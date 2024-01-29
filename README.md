@@ -25,12 +25,12 @@ The application is served by an nginx service running in OpenShift. The nginx se
 as a reverse proxy for backend API traffic. This allows the team to serve frontend and backend traffic
 via a single subdomain.
 
-### Backend
+### Backend 
 
 The frontend application interfaces with a backend REST API developed with Python using the Django
-web framework. Django is a highly popular framework used by platforms such as Instagram, Eventbrite
-and Sentry, and has been used at BC Gov for the Transportation Fuels Reporting 
-System, and the Groundwater Wells and Aquifers applications (FLNRO).
+web framework. Django is a highly popular framework used by platforms
+such as Instagram, Eventbrite and Sentry, and has been used at BC Gov for the Transportation 
+Fuels Reporting System, and the Groundwater Wells and Aquifers applications (FLNRO).
 
 ### Database
 

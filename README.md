@@ -36,3 +36,21 @@ Fuels Reporting System, and the Groundwater Wells and Aquifers applications (FLN
 
 Application data is stored using a PostgreSQL database. PostgreSQL is widely used within BC Gov's
 OpenShift platform, and patterns exist for high availability deployments and automated backups.
+
+## Tests
+
+### Backend tests
+
+```sh
+cd backend
+poetry install
+poetry run python manage.py test
+```
+
+### Frontend tests
+
+```sh
+cd frontend
+npm install
+npm run test:unit
+```
